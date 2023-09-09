@@ -18,7 +18,32 @@ int yes();
 int no();
 
 int main(){
+    int n;
+    cin >> n;
+    vi l1;
+    for(int i = 1; i <= 9; i++){
+        if(n % i == 0){
+            l1.push_back(i);
+        }
+    }
+    vi l2;
+    for(int i = 0; i < l1.size(); i++){
+        l2.push_back(n / l1[i]);
+    }
     
+    f0i(n + 1){
+        bool out = false;
+        f0j(l2.size()){
+            if(i % l2[j] == 0){
+                cout << l1[j];
+                out = true;
+                break;
+            }
+        }
+        if(!out){
+            cout << '-';
+        }
+    }
 }
 
 int yes(){

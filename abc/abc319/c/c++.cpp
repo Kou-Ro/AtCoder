@@ -1,3 +1,4 @@
+// Not correct
 #include <bits/stdc++.h>
 using namespace std;
 typedef string str;
@@ -18,6 +19,43 @@ int yes();
 int no();
 
 int main(){
+    vvi c(3, vi(3, 0));
+    int hit = 0;
+    f0i(3){
+        f0j(3){
+            cin >> c[i][j];
+        }
+        vi cpc(3);
+        copy(c[i].begin(), c[i].end(), cpc.begin());
+        sort(cpc.begin(), cpc.end());
+        if((cpc[0] == cpc[1]) || (cpc[1] == cpc[2])){
+            hit++;
+        }
+    }
+    f0i(3){
+        vi cpc{c[0][i], c[1][i], c[2][i]};
+        sort(cpc.begin(), cpc.end());
+        if((cpc[0] == cpc[1]) || (cpc[1] == cpc[2])){
+            hit++;
+        }
+    }
+    {
+        vi cpc{c[0][0], c[1][1], c[2][2]};
+        sort(cpc.begin(), cpc.end());
+        if((cpc[0] == cpc[1]) || (cpc[1] == cpc[2])){
+            hit++;
+        }
+    }
+    {
+        vi cpc{c[0][2], c[1][1], c[2][0]};
+        sort(cpc.begin(), cpc.end());
+        if((cpc[0] == cpc[1]) || (cpc[1] == cpc[2])){
+            hit++;
+        }
+    }
+    cout << hit << endl;
+    double ans = pow(2, hit) / pow(3, hit);
+    cout << ans;
     
 }
 
