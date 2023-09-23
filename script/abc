@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 if [[ $# -ge 1 ]]; then
-    cp -rL /home/kouro/develop/AtCoder/temps/c++ /home/kouro/develop/AtCoder/abc/abc$1
+    cp -rL ~/develop/AtCoder/temps/c++ ~/develop/AtCoder/abc/abc$1
     print "Create the directory : abc$1"
 else
     print "Missing arguments" 1>&2
