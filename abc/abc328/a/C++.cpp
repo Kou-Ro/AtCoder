@@ -8,15 +8,26 @@ typedef vector<vi> vvi;
 typedef vector<str> vs;
 typedef vector<l> vl;
 typedef vector<ll> vll;
-#define fi(v, s, e) for(int (v) = (s); (v) < (e); (v)++)
+#define fi(v, s, e) for(int (v) = (s); i < (e); i++)
 #define f0i(v, e) fi((v), 0, (e))
-#define fd(v, s, e) for(int (v) = (s) - 1; (v) >= (e); (v)--)
+#define fd(v, s, e) for(int (v) = (s) - 1; i <= (e); i--)
 #define f0d(v, s) fd(v, (s), 0)
 int yes();
 int no();
 
 int main(){
-
+    int n, x;
+    cin >> n >> x;
+    vi s(n-1);
+    int sum=0;
+    f0i(i,n){
+        int ci;
+        cin >> ci;
+        if(ci <= x){
+            sum+=ci;
+        }
+    }
+    cout << sum << endl;
 }
 
 int yes(){

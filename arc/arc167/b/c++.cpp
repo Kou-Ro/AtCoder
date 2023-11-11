@@ -8,10 +8,12 @@ typedef vector<vi> vvi;
 typedef vector<str> vs;
 typedef vector<l> vl;
 typedef vector<ll> vll;
-#define fi(v, s, e) for(int (v) = (s); (v) < (e); (v)++)
-#define f0i(v, e) fi((v), 0, (e))
-#define fd(v, s, e) for(int (v) = (s) - 1; (v) >= (e); (v)--)
-#define f0d(v, s) fd(v, (s), 0)
+#define fi(s, e) for(int i = (s); i < (e); i++)
+#define f0i(e) fi(0,(e))
+#define fj(s, e) for(int j = (s); j < (e); j++)
+#define f0j(e) fj(0,(e))
+#define fk(s, e) for(int k = (s); k < (e); k++)
+#define f0k(e) fk(0,(e))
 int yes();
 int no();
 
