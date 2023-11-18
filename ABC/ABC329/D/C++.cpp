@@ -1,0 +1,47 @@
+#include <bits/stdc++.h>
+using namespace std;
+typedef string str;
+typedef long l;
+typedef long long ll;
+typedef vector<int> vi;
+typedef vector<vi> vvi;
+typedef vector<str> vs;
+typedef vector<l> vl;
+typedef vector<ll> vll;
+#define fi(v, s, e) for(int (v) = (s); (v) < (e); (v)++)
+#define f0i(v, e) fi((v), 0, (e))
+#define fd(v, s, e) for(int (v) = (s) - 1; (v) >= (e); (v)--)
+#define f0d(v, s) fd(v, (s), 0)
+#define gi(v) v.begin(), v.end()
+int yes();
+int no();
+
+int main(){
+    int n, m;
+    cin >> n >> m;
+    vector<int> p(n);
+    
+    int maxp = 0;
+    for(int i = 0; i < m; i++){
+        int cn;
+        cin >> cn;
+        p[cn - 1]++;
+        if(p[cn - 1] > p[maxp]){
+            maxp = cn - 1;
+        }
+        else if(p[cn - 1] == p[maxp]){
+            maxp = min(cn - 1, maxp);
+        }
+        cout << maxp + 1 << endl;
+    }
+}
+
+int yes(){
+    cout << "Yes" << endl;
+    return 0;
+}
+
+int no(){
+    cout << "No" << endl;
+    return 0;
+}
