@@ -1,0 +1,21 @@
+#!/bin/zsh
+
+if [[ $# -ge 1 ]]; then
+    mkdir -p ${HOME}/Develop/AtCoder/ABC/ABC${1}
+
+    for i in {A..H}; do
+       mkdir ${HOME}/Develop/AtCoder/ABC/ABC${1}/${i}
+    cp ~/Develop/AtCoder/temps/C++/C++.cpp ${HOME}/Develop/AtCoder/ABC/ABC${1}/${i}/C++.cpp
+       echo "\
+cmake_minimum_required(VERSION 3.26)
+project(ABC${1}-${i})
+
+set(CMAKE_CXX_STANDARD 20)
+
+add_executable(C++
+        C++.cpp) " > ${HOME}/Develop/AtCoder/ABC/ABC${1}/${i}/CMakeLists.txt
+    done
+    print "Create the directory : ABC$1"
+else
+    print "Missing arguments" 1>&2
+fi

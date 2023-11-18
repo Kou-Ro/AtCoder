@@ -12,11 +12,12 @@ typedef vector<ll> vll;
 #define f0i(v, e) fi((v), 0, (e))
 #define fd(v, s, e) for(int (v) = (s) - 1; (v) >= (e); (v)--)
 #define f0d(v, s) fd(v, (s), 0)
+#define gi(v) v.begin(), v.end()
 int yes();
 int no();
 
 int main(){
-
+    
 }
 
 int yes(){
